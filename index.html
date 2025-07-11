@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Video Assignment in Progress</title>
+  <script>
+    window.onload = function () {
+      const options = [
+        {
+          video: "https://youtu.be/E8B_ZH3ATOQ",
+          form: "https://docs.google.com/forms/d/e/1FAIpQLSdznhC1729w_2WrPiQRsI12M6X7gRKsyDsjMAKUovFbTQ58gA/viewform?usp=pp_url&entry.821341242=A"
+        },
+        {
+          video: "https://youtu.be/y2liacJplS0",
+          form: "https://docs.google.com/forms/d/e/1FAIpQLSdznhC1729w_2WrPiQRsI12M6X7gRKsyDsjMAKUovFbTQ58gA/viewform?usp=pp_url&entry.821341242=B"
+        },
+        {
+          video: "https://youtu.be/Xs0tJXOwKOg",
+          form: "https://docs.google.com/forms/d/e/1FAIpQLSdznhC1729w_2WrPiQRsI12M6X7gRKsyDsjMAKUovFbTQ58gA/viewform?usp=pp_url&entry.821341242=C"
+        },
+        {
+          video: "https://youtu.be/owMm-aFPjGI",
+          form: "https://docs.google.com/forms/d/e/1FAIpQLSdznhC1729w_2WrPiQRsI12M6X7gRKsyDsjMAKUovFbTQ58gA/viewform?usp=pp_url&entry.821341242=D"
+        }
+      ];
+
+      const selected = options[Math.floor(Math.random() * options.length)];
+      window.location.href = selected.video;
+    };
+  </script>
+</head>
+<body>
+  <p>Randomly assigning you to one video group. Please wait...</p>
+</body>
+</html>
