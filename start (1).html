@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Influencer Assignment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f8f8f8;
+      padding: 30px;
+    }
+    .card {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #333;
+    }
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script>
+    let influencerType = Math.random() < 0.5 ? 'lucy' : 'rozy';
+
+    function loadInfluencer() {
+      const title = document.getElementById("type-title");
+      const description = document.getElementById("type-description");
+      const image = document.getElementById("influencer-image");
+
+      if (influencerType === 'lucy') {
+        title.innerHTML = "<b>Self-created Virtual Influencer</b>";
+        image.src = "lucy.png";
+        description.innerHTML = "LUCY is a self-created virtual influencer developed by Lotte in South Korea using advanced technology. She frequently shares information about Lotte brand products on the social media platform Instagram, promoting them to her followers and other users. The following is a video ad in which LUCY endorses the virtual chocolate brand <b>Delizia</b>.";
+      } else {
+        title.innerHTML = "<b>Authorized Virtual Influencer</b>";
+        image.src = "rozy.png";
+        description.innerHTML = "ROZY is the first virtual influencer in South Korea, created by Sidus Studio X in 2020. She often collaborates with brands as an authorized endorser. On Instagram, she regularly shares information about various products and brands with her followers and other users. The following is a video ad in which ROZY endorses the virtual chocolate brand <b>CHOCO</b>.";
+      }
+    }
+
+    function goToVideoPage() {
+      let destination = "";
+      if (influencerType === 'lucy') {
+        destination = Math.random() < 0.5 ? "groupA.html" : "groupB.html";
+      } else {
+        destination = Math.random() < 0.5 ? "groupC.html" : "groupD.html";
+      }
+      window.location.href = destination;
+    }
+  </script>
+</head>
+<body onload="loadInfluencer()">
+  <div class="card">
+    <h2 id="type-title"></h2>
+    <img id="influencer-image" src="" alt="Virtual Influencer">
+    <p id="type-description"></p>
+    <button onclick="goToVideoPage()">I have read the information, click to start watching the video</button>
+  </div>
+</body>
+</html>
